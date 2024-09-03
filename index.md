@@ -5,4 +5,4 @@ description: Home Page
 hide: true
 ---
 
-My journey starts here - Keerthan Karumudi#2
+My journey starts here - Keerthan Karumudi
