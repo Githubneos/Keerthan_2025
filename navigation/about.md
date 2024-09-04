@@ -97,19 +97,15 @@ permalink: /about/
     }
 </script>
 
-// Comment in or Uncomment out the following themes to use them 
+public class QuoteDisplay {
+    public static void main(String[] args) {
+        String quote = "There are five important things for living a successful and fulfilling life: "
+                     + "never stop dreaming, never stop believing, never give up, never stop trying, "
+                     + "and never stop learning.";
+        String author = "- Roy T. Bennett";
 
-// Dark themes
-//@import "minima/leaf/_leaf";  //Leaf theme
-//@import "minima/hacker/jekyll-theme-hacker"; //Hacker theme 
-@import "minima/dracula/_dracula";
-
-// Light themes
-//@import "minima/hamilton/main"; //Hamilton theme
-//@import "minima/monophase/main"; //Monophase theme 
-//@import "minima/minimal-mistakes/__minimal-mistakes"; //Minimal Mistakes theme 
-// Mix Light themes with this if your eyes are bleeding 
-@import "minima/dracula/dark-mode";
-
-// Styles for nighthawk theme, do not remove
-@import "nighthawk/main";
+        // Display the quote
+        System.out.println("\"" + quote + "\"");
+        System.out.println(author);
+    }
+}
