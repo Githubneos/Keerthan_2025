@@ -6,7 +6,10 @@ github_repo: "Keerthan_2025"
 baseurl: "/Keerthan_2025"
 future: true
 remote_theme: jekyll/minima
-minima:
+theme: minima
+sass:
+  load_paths:
+    - _sass/nighthawk
   skin: dark
   social_links:
     - { platform: github, user_url: "https://github.com/nighthawkcoders"}
@@ -24,3 +27,21 @@ header_pages:
   - navigation/search.md
   - navigation/about.md
   - README4YML.md
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  {% if page.theme_style == 'nighthawk' %}
+    <link rel="stylesheet" href="{{ '/assets/nighthawk.css' | relative_url }}">
+  {% else %}
+    <link rel="stylesheet" href="{{ '/assets/minima.css' | relative_url }}">
+  {% endif %}
+</head>
+<body>
+  {{ content }}
+</body>
+</html>
+@import "nighthawk/nighthawk";
