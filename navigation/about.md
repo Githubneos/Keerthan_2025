@@ -110,15 +110,15 @@ public class QuoteDisplay {
     }
 }
 
-# Install necessary libraries if not already installed
-# !pip install newspaper3k
-# !pip install wikipedia
+#Install necessary libraries if not already installed
+#!pip install newspaper3k
+#!pip install wikipedia
 
 from newspaper import Article
 import wikipedia
 import sys
 
-# Check if running in Jupyter or IPython environment
+#Check if running in Jupyter or IPython environment
 def is_notebook():
     try:
         from IPython import get_ipython
@@ -162,7 +162,7 @@ def display_wikipedia_summary(terms):
                 print(f"Summary: {summary}\n")
                 print("\n")
 
-# Define the URLs and terms
+#Define the URLs and terms
 urls = [
     "http://cnn.com/2023/03/29/entertainment/the-mandalorian-episode-5-recap/index.html",
     "https://www.cnn.com/2023/06/09/entertainment/jurassic-park-anniversary/index.html"
@@ -170,6 +170,6 @@ urls = [
 
 terms = ["Python (programming language)", "JavaScript"]
 
-# Function calls
+#Function calls
 display_article(urls)
 display_wikipedia_summary(terms)
