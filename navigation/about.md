@@ -110,34 +110,66 @@ public class QuoteDisplay {
     }
 }
 
-#!pip install newspaper3k
+# Install necessary libraries if not already installed
+# !pip install newspaper3k
+# !pip install wikipedia
+
 from newspaper import Article
-from IPython.display import display, Markdown
+import wikipedia
+import sys
 
+# Check if running in Jupyter or IPython environment
+def is_notebook():
+    try:
+        from IPython import get_ipython
+        if 'IPKernelApp' not in get_ipython().config:  # Check if IPython kernel is running
+            return False
+        return True
+    except:
+        return False
 
-urls = ["http://cnn.com/2023/03/29/entertainment/the-mandalorian-episode-5-recap/index.html", 
-        "https://www.cnn.com/2023/06/09/entertainment/jurassic-park-anniversary/index.html"]
+def display_article(urls):
+    for url in urls:
+        article = Article(url)
+        article.download()
+        article.parse()
+        
+        # Check if in a Jupyter environment to use Markdown display
+        if is_notebook():
+            from IPython.display import display, Markdown
+            display(Markdown(f"**{article.title}**"))  # Display the title in bold
+            display(Markdown(article.text))  # Display the article text
+        else:
+            # Console output
+            print(f"Title: {article.title}\n")
+            print(f"Content: {article.text}\n")
+            print("\n")
 
-for url in urls:
-    article = Article(url)
-    article.download()
-    article.parse()
-    # Jupyter Notebook Display
-    # print(article.title)
-    display(Markdown(article.title)) # Jupyter display only
-    display(Markdown(article.text)) # Jupyter display only
-    print("\n")
+def display_wikipedia_summary(terms):
+    for term in terms:
+        # Search for a page
+        result = wikipedia.search(term)
+        if result:
+            # Get the summary of the first result
+            summary = wikipedia.summary(result[0])
+            if is_notebook():
+                from IPython.display import display, Markdown
+                display(Markdown(f"**{term}**"))  # Display the term in bold
+                display(Markdown(summary))  # Display the Wikipedia summary
+            else:
+                # Console output
+                print(f"Term: {term}\n")
+                print(f"Summary: {summary}\n")
+                print("\n")
 
-#!pip install wikipedia
-import wikipedia 
-from IPython.display import display, Markdown # add for Jupyter
+# Define the URLs and terms
+urls = [
+    "http://cnn.com/2023/03/29/entertainment/the-mandalorian-episode-5-recap/index.html",
+    "https://www.cnn.com/2023/06/09/entertainment/jurassic-park-anniversary/index.html"
+]
 
 terms = ["Python (programming language)", "JavaScript"]
-for term in terms:
-    # Search for a page 
-    result = wikipedia.search(term)
-    # Get the summary of the first result
-    summary = wikipedia.summary(result[0])
-    print(term) 
-    # print(summary) # console display
-    display(Markdown(summary)) # Jupyter display
+
+# Function calls
+display_article(urls)
+display_wikipedia_summary(terms)
