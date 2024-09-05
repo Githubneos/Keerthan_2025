@@ -30,7 +30,7 @@ header_pages:
 
 :<!DOCTYPE html>
 :<html lang="en">
-<:head>
+<head>
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
