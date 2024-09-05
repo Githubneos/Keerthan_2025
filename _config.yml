@@ -28,9 +28,9 @@ header_pages:
   - navigation/about.md
   - README4YML.md
 
-<!DOCTYPE html>:
-<html lang="en">
-<head>
+:<!DOCTYPE html>
+:<html lang="en">
+<:head>
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
