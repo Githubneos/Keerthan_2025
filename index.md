@@ -194,8 +194,9 @@ My journey starts here - Keerthan Karumudi
 
 <script>
 ![An old rock in the desert](https://live.staticflickr.com/1651/31833779864_c19e357b52_b.jpg "Shiprock, New Mexico by Beau Rogers")
+</script>
 
-
+<script>
 from emoji import emojize 
 print(emojize(":thumbs_up: Python is awesome! :grinning_face:"))
 </script>
