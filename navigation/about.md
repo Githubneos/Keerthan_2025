@@ -44,3 +44,26 @@ Welcome to my website! Here are some of my favorite movies:
 
 </div>
 
+# My Interests in Computer Science and Engineering
+
+Here are some of my interests: 
+
+## Computer Science Principles (CSP) Interests
+
+- **Coding and Programming**: I enjoy writing code to solve problems and making passion projects using languages like Python, JavaScript, and Scratch.
+- **Game Development**: Making simple games using tools like Unity, Roblox, or even Python! 
+- **Web Design**: Learning to build my own websites using HTML, CSS, and JavaScript. I like making sites that look cool and are easy to use.
+- **Artificial Intelligence (AI) for Beginners**: Exploring how AI works and how it’s used in apps like Siri, Alexa, and Google Assistant.
+- **Robotics and Automation**: Building and programming simple robots using kits like LEGO Mindstorms or VEX Robotics.
+
+## Engineering Interests
+
+- **Electronics and Circuits**: Experimenting with simple circuits using batteries, wires, LEDs, and breadboards to understand how electronics work.
+- **3D Printing and Design**: Learning to design and print 3D models using software like Tinkercad or SketchUp. It's amazing to see digital designs turn into real objects!
+- **Mechanical Engineering Basics**: Understanding how gears, levers, and pulleys work in machines and gadgets.
+- **Environmental Engineering**: Learning about renewable energy sources like solar and wind power and how technology can help protect the environment.
+- **DIY Projects and Makerspace Activities**: Building things with my hands, like making model bridges, rockets, or even simple machines.
+- **Aerospace and Space Exploration**: Fascinated by rockets, space missions, and how spacecraft are designed to explore the universe.
+
+
+
