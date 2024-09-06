@@ -1,6 +1,5 @@
 ---
 layout: page
-title: About Me
 permalink: /about/
 ---
 
@@ -27,13 +26,13 @@ Welcome to my website! Here are some of my favorite movies:
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
 
-  <!-- Movie 1 -->
+  <!-- Shawkshank Redemption -->
   <div style="background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 15px; width: 200px; overflow: hidden; transition: transform 0.2s;">
       <img src="https://m.media-amazon.com/images/I/51NiGlapXlL._AC_.jpg" alt="The Shawshank Redemption" style="width: 100%; height: auto;">
       <div style="padding: 10px; font-size: 18px; font-weight: bold; color: #555;">The Shawshank Redemption</div>
   </div>
 
-  <!-- Movie 2 -->
+  <!--Matrix -->
   <div style="background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 15px; width: 200px; overflow: hidden; transition: transform 0.2s;">
       <img src="https://m.media-amazon.com/images/I/51oBxmV-dML._AC_.jpg" alt="The Godfather" style="width: 100%; height: auto;">
       <div style="padding: 10px; font-size: 18px; font-weight: bold; color: #555;">The Matrix</div>
@@ -59,6 +58,7 @@ Welcome to my website! Here are some of my favorite movies:
 - **Environmental Engineering**: Learning about renewable energy sources like solar and wind power and how technology can help protect the environment.
 - **DIY Projects and Makerspace Activities**: Building things with my hands, like making model bridges, rockets, or even simple machines.
 - **Aerospace and Space Exploration**: Fascinated by rockets, space missions, and how spacecraft are designed to explore the universe.
+
 
 
 
