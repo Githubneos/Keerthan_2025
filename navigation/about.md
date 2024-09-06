@@ -3,11 +3,26 @@ layout: page
 title: About
 permalink: /about/
 ---
----
-layout: page
-title: About
-permalink: /about/
----
+
+# About Me
+Places I have Lived:
+
+<div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+  
+  <!-- California Flag -->
+  <div style="text-align: center; margin: 20px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" alt="Flag of California" style="width: 200px; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+    <div style="font-size: 18px; font-weight: bold; color: #555; margin-top: 10px;">forever</div>
+  </div>
+
+  <!-- India Flag -->
+  <div style="text-align: center; margin: 20px;">
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="Flag of India" style="width: 200px; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+    <div style="font-size: 18px; font-weight: bold; color: #555; margin-top: 10px;">2 weeks a year</div>
+  </div>
+
+</div>
+
 
 # About Me
 
