@@ -1,10 +1,9 @@
 ---
 layout: page
-title: About
+title: About ME
 permalink: /about/
 ---
 
-# About Me
 Places I have Lived:
 
 <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
@@ -23,8 +22,6 @@ Places I have Lived:
 
 </div>
 
-
-# About Me
 
 Welcome to my website! Here are some of my favorite movies:
 
@@ -65,14 +62,6 @@ Here are some of my interests:
 - **DIY Projects and Makerspace Activities**: Building things with my hands, like making model bridges, rockets, or even simple machines.
 - **Aerospace and Space Exploration**: Fascinated by rockets, space missions, and how spacecraft are designed to explore the universe.
 
-
----
-layout: page
-title: Movies and Their Summaries
-permalink: /movies/
----
-
-# Movie Images and Summaries
 
 <div id="movie-summaries">
   <!-- Summaries and images will be loaded here dynamically -->
