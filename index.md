@@ -215,42 +215,4 @@ My journey starts here - Keerthan Karumudi
     </script>
 </body>
 </html>
-<script>
-from newspaper import Article
-import wikipedia
 
-# List of URLs to scrape articles from
-urls = [
-    "http://cnn.com/2023/03/29/entertainment/the-mandalorian-episode-5-recap/index.html",
-    "https://www.cnn.com/2023/06/09/entertainment/jurassic-park-anniversary/index.html"
-]
-
-# Scrape and display articles from the URLs
-for url in urls:
-    try:
-        article = Article(url)
-        article.download()
-        article.parse()
-        print("Title:", article.title)  # Print the title of the article
-        print("Content:", article.text)  # Print the content of the article
-        print("\n" + "-"*80 + "\n")  # Separator for clarity
-    except Exception as e:
-        print(f"Error processing {url}: {e}")
-
-# List of terms to search on Wikipedia
-terms = ["Python (programming language)", "JavaScript"]
-
-# Search and display summaries for the terms on Wikipedia
-for term in terms:
-    try:
-        result = wikipedia.search(term)  # Search for the term on Wikipedia
-        if result:
-            summary = wikipedia.summary(result[0])  # Get the summary of the first search result
-            print(f"Summary for {term}:")
-            print(summary)
-            print("\n" + "-"*80 + "\n")  # Separator for clarity
-        else:
-            print(f"No results found for {term}.")
-    except Exception as e:
-        print(f"Error processing term '{term}': {e}")
-</script>
