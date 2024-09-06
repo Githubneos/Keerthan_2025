@@ -43,9 +43,7 @@ Welcome to my website! Here are some of my favorite movies:
 
 # My Interests in Computer Science and Engineering
 
-Here are some of my interests: 
-
-## Computer Science Principles (CSP) Interests
+## Computer Science Interests
 
 - **Coding and Programming**: I enjoy writing code to solve problems and making passion projects using languages like Python, JavaScript, and Scratch.
 - **Game Development**: Making simple games using tools like Unity, Roblox, or even Python! 
