@@ -5,7 +5,7 @@ github_username: nighthawkcoders
 github_repo: "Keerthan_2025" 
 baseurl: "/Keerthan_2025"
 future: true
-remote_theme: jekyll/dinky
+remote_theme: jekyll/minima
 minima:
 sass:
   load_paths:
