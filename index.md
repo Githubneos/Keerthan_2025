@@ -196,8 +196,24 @@ My journey starts here - Keerthan Karumudi
 ![An old rock in the desert](https://live.staticflickr.com/1651/31833779864_c19e357b52_b.jpg "Shiprock, New Mexico by Beau Rogers")
 </script>
 
-<script>
-from emoji import emojize 
-print(emojize(":thumbs_up: Python is awesome! :grinning_face:"))
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Display</title>
+</head>
+<body>
+    <div id="emoji-text"></div> <!-- Placeholder to display the emoji text -->
+
+    <script>
+        // JavaScript code to display emojis
+        const emojiText = "👍 Python is awesome! 😀";
+
+        // Get the HTML element by ID and set its innerText to emojiText
+        document.getElementById('emoji-text').innerText = emojiText;
+    </script>
+</body>
+</html>
+
 
