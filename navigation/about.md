@@ -66,4 +66,73 @@ Here are some of my interests:
 - **Aerospace and Space Exploration**: Fascinated by rockets, space missions, and how spacecraft are designed to explore the universe.
 
 
+---
+layout: page
+title: Movies and Their Summaries
+permalink: /movies/
+---
+
+# Movie Images and Summaries
+
+<div id="movie-summaries">
+  <!-- Summaries and images will be loaded here dynamically -->
+</div>
+
+<script>
+// JavaScript to fetch movie summaries and images from Wikipedia
+
+async function fetchWikipediaInfo() {
+  const terms = ["Jurassic Park (film)", "Avengers (2012 film)"];
+  const movieContainer = document.getElementById("movie-summaries");
+
+  for (const term of terms) {
+    const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(term)}`;
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+
+      // Create a new div element to hold each movie's information
+      const movieElement = document.createElement("div");
+      movieElement.style.marginBottom = "40px"; // Add some space between movie sections
+
+      // Add movie title
+      const titleElement = document.createElement("h2");
+      titleElement.textContent = data.title;
+      movieElement.appendChild(titleElement);
+
+      // Add movie summary
+      const summaryElement = document.createElement("p");
+      summaryElement.textContent = data.extract;
+      movieElement.appendChild(summaryElement);
+
+      // Add movie image if available
+      if (data.thumbnail && data.thumbnail.source) {
+        const imgElement = document.createElement("img");
+        imgElement.src = data.thumbnail.source;
+        imgElement.alt = data.title;
+        imgElement.style.width = "200px"; // Resize image for display
+        imgElement.style.height = "auto";
+        movieElement.appendChild(imgElement);
+      }
+
+      // Add a link to read more on Wikipedia
+      const linkElement = document.createElement("a");
+      linkElement.href = data.content_urls.desktop.page;
+      linkElement.target = "_blank"; // Open in a new tab
+      linkElement.textContent = "Read more on Wikipedia";
+      movieElement.appendChild(linkElement);
+
+      // Append the movie element to the container
+      movieContainer.appendChild(movieElement);
+    } catch (error) {
+      console.error("Error fetching Wikipedia summary:", error);
+    }
+  }
+}
+
+// Call the function to fetch and display movie summaries and images
+fetchWikipediaInfo();
+</script>
+
+
 
