@@ -199,14 +199,9 @@ My journey starts here - Keerthan Karumudi
 
 👍 Python is awesome! 😀
 
----
-layout: default
-title: Snake Game
----
-
 # Snake Game
 
-Play the classic Snake game below!
+Play the Snake game below!
 
 <!-- HTML for the Snake Game -->
 <div id="game-container" style="text-align: center;">
