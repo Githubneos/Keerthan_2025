@@ -191,5 +191,6 @@ My journey starts here - Keerthan Karumudi
   });
 </script>
 
+👍 Python is awesome! 😀
 
 
