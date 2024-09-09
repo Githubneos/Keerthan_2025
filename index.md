@@ -191,12 +191,6 @@ My journey starts here - Keerthan Karumudi
   });
 </script>
 
-## Notebooks
-
-- [Notebook 1](notebooks/notebook1.html)
-- [Notebook 2](notebooks/notebook2.html)
-- [Notebook 3](notebooks/notebook3.html)
-
 👍 Python is awesome! 😀
 
 # Snake Game
