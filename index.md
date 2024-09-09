@@ -194,7 +194,6 @@ My journey starts here - Keerthan Karumudi
 👍 Python is awesome! 😀
 
 # Snake Game
-
 Play the Snake game below!
 
 <!-- HTML for the Snake Game -->
