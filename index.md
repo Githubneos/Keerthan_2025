@@ -197,6 +197,17 @@ My journey starts here - Keerthan Karumudi
 - [Notebook 2](notebooks/notebook2.html)
 - [Notebook 3](notebooks/notebook3.html)
 
+- **Data Analysis Notebooks**
+  - [Data Cleaning](notebooks/data_cleaning.html)
+  - [Data Visualization](notebooks/data_visualization.html)
+
+- **Machine Learning Notebooks**
+  - [Regression Models](notebooks/regression_models.html)
+  - [Classification Models](notebooks/classification_models.html)
+
+- **Deep Learning Notebooks**
+  - [Neural Networks](notebooks/neural_networks.html)
+  - [Convolutional Neural Networks (CNNs)](notebooks/cnns.html)
 
 👍 Python is awesome! 😀
 # Passion Projects:
