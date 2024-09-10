@@ -12,7 +12,7 @@ permalink: /blogs/
 <script src="https://utteranc.es/client.js"
         repo="Githubneos/Keerthan_2025" 
         issue-term="pathname"
-        theme="github-light"
+        theme="pages-themes/cayman@v0.2.0"
         crossorigin="anonymous"
         async>
 </script>
