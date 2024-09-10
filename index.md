@@ -8,6 +8,14 @@ hide: true
 ---
 
 My journey starts here - Keerthan Karumudi
+
+## Notebooks Menu
+
+- [Planning Document](planning_document.ipynb)
+- [JavaScript Example Notebook](javascript_example.ipynb)
+- [About Page](about_page.ipynb)
+
+
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
