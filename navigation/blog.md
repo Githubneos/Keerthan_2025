@@ -10,7 +10,7 @@ permalink: /blogs/
 
 <!-- Include Utterances Script -->
 <script src="https://utteranc.es/client.js"
-        repo="yourusername/yourrepository"  <!-- Replace with your GitHub repo -->
+        repo="Githubneos/Keerthan_2025" 
         issue-term="pathname"
         theme="github-light"
         crossorigin="anonymous"
