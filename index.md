@@ -193,6 +193,35 @@ My journey starts here - Keerthan Karumudi
 
 👍 Python is awesome! 😀
 
+# NBA Team Logos
+
+<style>
+    .logo-container {
+        display: inline-block;
+        margin: 20px;
+        text-align: center;
+    }
+    .logo-container img {
+        width: 200px;
+        height: auto;
+    }
+    .logo-container p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+
+<div class="logo-container">
+    <img src="images/warriors_logo.png" alt="Golden State Warriors Logo">
+    <p>Golden State Warriors</p>
+</div>
+
+<div class="logo-container">
+    <img src="images/celtics_logo.png" alt="Boston Celtics Logo">
+    <p>Boston Celtics</p>
+</div>
+
+
 # Snake Game
 Play the Snake game below!
 
