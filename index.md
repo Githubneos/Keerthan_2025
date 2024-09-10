@@ -215,14 +215,14 @@ My journey starts here - Keerthan Karumudi
 
   <!-- Golden State warriors logo -->
   <div style="background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 15px; width: 200px; overflow: hidden; transition: transform 0.2s;">
-      <img src="https://en.wikipedia.org/wiki/File:Golden_State_Warriors_logo.svg" alt="The Shawshank Redemption" style="width: 100%; height: auto;">
-      <div style="padding: 10px; font-size: 18px; font-weight: bold; color: #555;">The Shawshank Redemption</div>
+      <img src="https://en.wikipedia.org/wiki/File:Golden_State_Warriors_logo.svg" alt="Golden State Warriors" style="width: 100%; height: auto;">
+      <div style="padding: 10px; font-size: 18px; font-weight: bold; color: #555;">Golden State warriors</div>
   </div>
 
   <!--Boston Celtics logo -->
   <div style="background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 15px; width: 200px; overflow: hidden; transition: transform 0.2s;">
-      <img src="https://en.wikipedia.org/wiki/File:Boston_Celtics.svg" alt="The Godfather" style="width: 100%; height: auto;">
-      <div style="padding: 10px; font-size: 18px; font-weight: bold; color: #555;">The Matrix</div>
+      <img src="https://en.wikipedia.org/wiki/File:Boston_Celtics.svg" alt="Boston Celtics" style="width: 100%; height: auto;">
+      <div style="padding: 10px; font-size: 18px; font-weight: bold; color: #555;">Boston Celtics</div>
   </div>
 
 </div>
