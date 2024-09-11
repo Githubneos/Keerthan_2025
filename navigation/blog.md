@@ -7,7 +7,7 @@ comments: true
 ---
 <div id="comments">
   <script src="https://utteranc.es/client.js"
-          repo="yourusername/yourrepository"
+          repo="Githubneos/Keerthan_2025"
           issue-term="pathname"
           theme="github-light"
           crossorigin="anonymous"
