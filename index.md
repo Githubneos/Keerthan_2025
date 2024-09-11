@@ -5,16 +5,15 @@ description: Home Page
 author: Keerthan Karumudi
 image: /images/mario_animation.png
 hide: true
+comments: true
 ---
 
-My journey starts here - Keerthan Karumudi
-
-## Notebooks Menu
-
-- [Planning Document](planning_document.ipynb)
-- [JavaScript Example Notebook](javascript_example.ipynb)
-- [About Page](about_page.ipynb)
-
+<table cellpadding="10">
+      <tr>
+        <td><a href="{{site.baseur1}}/ToolsJourney">Tools Journey</a></td>
+        <td><a href="{{site.baseur1}}/Sprint1TSDP">Sprint 1 partner check</a></td>
+      </tr>
+</table>
 
 <!-- Liquid:  statements -->
 
