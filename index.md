@@ -8,12 +8,14 @@ hide: true
 comments: true
 ---
 
-<table cellpadding="10">
-      <tr>
-        <td><a href="{{site.baseur1}}/ToolsJourney">Tools Journey</a></td>
-        <td><a href="{{site.baseur1}}/Sprint1TSDP">Sprint 1 partner check</a></td>
-      </tr>
-</table>
+
+## Notebooks
+
+- [Planning Document](./planning_document.ipynb)
+- [JavaScript Execution Notebook](./javascript_execution_notebook.ipynb)
+- [About Page](./about_page.ipynb)
+
+
 
 <!-- Liquid:  statements -->
 
