@@ -220,10 +220,6 @@ comments: true
     }
 </style>
 
-# NBA Team Logos
-
-Welcome to the NBA team logos page! Below are the logos for the Golden State Warriors and the Boston Celtics, styled to look nice on the page.
-
 <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
 
   <!-- Golden State Warriors logo -->
@@ -237,15 +233,10 @@ Welcome to the NBA team logos page! Below are the logos for the Golden State War
       <img src="https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg" alt="Boston Celtics" style="width: 100%; height: auto;">
       <div style="padding: 10px; font-size: 18px; font-weight: bold; color: #555;">Boston Celtics</div>
   </div>
+
+
   
 </div>
-
-  
-</div>
-
-
-</div>
-
 # Snake Game
 Play the Snake game below!
 
