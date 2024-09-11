@@ -202,8 +202,6 @@ comments: true
 
 👍 Python is awesome! 😀
 
-# NBA Team Logos
-
 <style>
     .logo-container {
         display: inline-block;
@@ -242,7 +240,7 @@ Play the Snake game below!
 
 <!-- HTML for the Snake Game -->
 <div id="game-container" style="text-align: center;">
-    <canvas id="gameCanvas" width="200" height="200" style="border:1px solid #000000;"></canvas>
+    <canvas id="gameCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
 </div>
 
 <!-- JavaScript for Snake Game -->
