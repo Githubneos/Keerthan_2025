@@ -222,17 +222,20 @@ comments: true
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
 
-  <!-- Golden State warriors logo -->
+  <!-- Golden State Warriors logo -->
   <div style="background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 15px; width: 200px; overflow: hidden; transition: transform 0.2s;">
-      <img src="https://en.wikipedia.org/wiki/File:Golden_State_Warriors_logo.svg" alt="Golden State Warriors" style="width: 100%; height: auto;">
-      <div style="padding: 10px; font-size: 18px; font-weight: bold; color: #555;">Golden State warriors</div>
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/01/Golden_State_Warriors_logo.svg" alt="Golden State Warriors" style="width: 100%; height: auto;">
+      <div style="padding: 10px; font-size: 18px; font-weight: bold; color: #555;">Golden State Warriors</div>
   </div>
 
-  <!--Boston Celtics logo -->
+  <!-- Boston Celtics logo -->
   <div style="background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 15px; width: 200px; overflow: hidden; transition: transform 0.2s;">
-      <img src="https://en.wikipedia.org/wiki/File:Boston_Celtics.svg" alt="Boston Celtics" style="width: 100%; height: auto;">
+      <img src="https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg" alt="Boston Celtics" style="width: 100%; height: auto;">
       <div style="padding: 10px; font-size: 18px; font-weight: bold; color: #555;">Boston Celtics</div>
   </div>
+  
+</div>
+
 
 </div>
 
@@ -241,7 +244,7 @@ Play the Snake game below!
 
 <!-- HTML for the Snake Game -->
 <div id="game-container" style="text-align: center;">
-    <canvas id="gameCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
+    <canvas id="gameCanvas" width="200" height="200" style="border:1px solid #000000;"></canvas>
 </div>
 
 <!-- JavaScript for Snake Game -->
