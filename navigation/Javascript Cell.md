@@ -5,5 +5,4 @@ description: A running Javascript Cell
 permalink: /snake/
 ---
 
-(% include nav/home.html %)
-
+(% include nav/home.html %) 
