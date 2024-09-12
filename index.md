@@ -5,9 +5,11 @@ description: Home Page
 author: Keerthan Karumudi
 image: /images/mario_animation.png
 hide: true
-comments: true
+comments: false
 ---
 (% include nav/home.html %)
+
+
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
