@@ -1,10 +1,9 @@
 ---
 layout: page
-title: Snake
-description: snake game
+title: JavaScript Cell
+description: A running Javascript Cell
 permalink: /snake/
 ---
 
 (% include nav/home.html %)
 
-future home of snake game

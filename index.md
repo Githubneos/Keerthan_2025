@@ -8,9 +8,6 @@ hide: true
 comments: true
 ---
 (% include nav/home.html %)
-
-
-
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
