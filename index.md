@@ -7,6 +7,7 @@ image: /images/mario_animation.png
 hide: true
 comments: true
 ---
+(% include nav/home.html %)
 
 
 ## Notebooks
