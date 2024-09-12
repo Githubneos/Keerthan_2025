@@ -10,13 +10,6 @@ comments: true
 (% include nav/home.html %)
 
 
-## Notebooks
-
-- [Planning Document](./planning_document.ipynb)
-- [JavaScript Execution Notebook](./javascript_execution_notebook.ipynb)
-- [About Page](./about_page.ipynb)
-
-
 
 <!-- Liquid:  statements -->
 
