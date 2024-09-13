@@ -231,111 +231,164 @@ comments: false
       <div style="padding: 10px; font-size: 18px; font-weight: bold; color: #555;">Boston Celtics</div>
   </div>
 
+<div id="game"></div>
 
-  
-</div>
-# Snake Game
-Play the Snake game below!
-
-<!-- HTML for the Snake Game -->
-<div id="game-container" style="text-align: center;">
-    <canvas id="gameCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
-</div>
-
-<!-- JavaScript for Snake Game -->
 <script>
-    // JavaScript for Snake Game
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const canvas = document.getElementById('gameCanvas');
-        const ctx = canvas.getContext('2d');
-        const box = 20; // Size of each square on the grid
-        let snake = [{x: 9 * box, y: 10 * box}];
-        let direction = 'RIGHT';
-        let food = {
-            x: Math.floor(Math.random() * 19 + 1) * box,
-            y: Math.floor(Math.random() * 19 + 1) * box,
-        };
-        let score = 0;
+// JavaScript for Minesweeper Game
 
-        // Control the snake direction
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'ArrowLeft' && direction !== 'RIGHT') direction = 'LEFT';
-            else if (event.key === 'ArrowUp' && direction !== 'DOWN') direction = 'UP';
-            else if (event.key === 'ArrowRight' && direction !== 'LEFT') direction = 'RIGHT';
-            else if (event.key === 'ArrowDown' && direction !== 'UP') direction = 'DOWN';
-        });
+document.addEventListener('DOMContentLoaded', function () {
+    const gridSize = 10; // Grid size (10x10)
+    const mineCount = 15; // Number of mines
+    const grid = document.getElementById("game");
+    const cells = [];
+    let gameOver = false;
 
-        // Check collision
-        function collision(head, array) {
-            for (let i = 0; i < array.length; i++) {
-                if (head.x === array[i].x && head.y === array[i].y) return true;
+    function createBoard() {
+        grid.innerHTML = '';
+        cells.length = 0;
+        gameOver = false;
+
+        // Create grid
+        for (let i = 0; i < gridSize; i++) {
+            const row = [];
+            for (let j = 0; j < gridSize; j++) {
+                const cell = document.createElement("button");
+                cell.classList.add("cell");
+                cell.dataset.x = i;
+                cell.dataset.y = j;
+                cell.addEventListener('click', () => handleClick(i, j));
+                row.push(cell);
+                grid.appendChild(cell);
             }
-            return false;
+            cells.push(row);
         }
 
-        // Draw the game
-        function draw() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (let i = 0; i < snake.length; i++) {
-                ctx.fillStyle = (i === 0) ? 'green' : 'white';
-                ctx.fillRect(snake[i].x, snake[i].y, box, box);
-                ctx.strokeStyle = 'red';
-                ctx.strokeRect(snake[i].x, snake[i].y, box, box);
+        // Randomly place mines
+        let minesPlaced = 0;
+        while (minesPlaced < mineCount) {
+            const x = Math.floor(Math.random() * gridSize);
+            const y = Math.floor(Math.random() * gridSize);
+            if (!cells[x][y].classList.contains('mine')) {
+                cells[x][y].classList.add('mine');
+                minesPlaced++;
             }
-
-            // Draw food
-            ctx.fillStyle = 'red';
-            ctx.fillRect(food.x, food.y, box, box);
-
-            // Old head position
-            let snakeX = snake[0].x;
-            let snakeY = snake[0].y;
-
-            // Direction movement
-            if (direction === 'LEFT') snakeX -= box;
-            if (direction === 'UP') snakeY -= box;
-            if (direction === 'RIGHT') snakeX += box;
-            if (direction === 'DOWN') snakeY += box;
-
-            // If snake eats food
-            if (snakeX === food.x && snakeY === food.y) {
-                score++;
-                food = {
-                    x: Math.floor(Math.random() * 19 + 1) * box,
-                    y: Math.floor(Math.random() * 19 + 1) * box,
-                };
-            } else {
-                // Remove tail
-                snake.pop();
-            }
-
-            // New head
-            const newHead = {x: snakeX, y: snakeY};
-
-            // Game over
-            if (
-                snakeX < 0 ||
-                snakeY < 0 ||
-                snakeX >= canvas.width ||
-                snakeY >= canvas.height ||
-                collision(newHead, snake)
-            ) {
-                clearInterval(game);
-                alert('Game Over! Your score is: ' + score);
-                return;
-            }
-
-            snake.unshift(newHead);
-            // Draw the score
-            ctx.fillStyle = 'black';
-            ctx.font = '20px Arial';
-            ctx.fillText('Score: ' + score, 10, canvas.height - 10);
         }
 
-        // Start the game
-        const game = setInterval(draw, 100);
-    });
+        // Calculate numbers for each cell
+        for (let i = 0; i < gridSize; i++) {
+            for (let j = 0; j < gridSize; j++) {
+                if (!cells[i][j].classList.contains('mine')) {
+                    const count = countMinesAround(i, j);
+                    if (count > 0) cells[i][j].textContent = count;
+                }
+            }
+        }
+    }
+
+    function countMinesAround(x, y) {
+        let count = 0;
+        for (let i = -1; i <= 1; i++) {
+            for (let j = -1; j <= 1; j++) {
+                const newX = x + i;
+                const newY = y + j;
+                if (newX >= 0 && newX < gridSize && newY >= 0 && newY < gridSize) {
+                    if (cells[newX][newY].classList.contains('mine')) count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    function handleClick(x, y) {
+        if (gameOver || cells[x][y].classList.contains('revealed')) return;
+
+        cells[x][y].classList.add('revealed');
+        if (cells[x][y].classList.contains('mine')) {
+            revealMines();
+            alert('Game Over! You clicked on a mine.');
+            gameOver = true;
+        } else if (cells[x][y].textContent === '') {
+            revealEmpty(x, y);
+        }
+
+        // Check if the game is won
+        if (checkWin()) {
+            alert('Congratulations! You won!');
+            gameOver = true;
+        }
+    }
+
+    function revealMines() {
+        for (let i = 0; i < gridSize; i++) {
+            for (let j = 0; j < gridSize; j++) {
+                if (cells[i][j].classList.contains('mine')) {
+                    cells[i][j].classList.add('revealed');
+                    cells[i][j].textContent = '💣';
+                }
+            }
+        }
+    }
+
+    function revealEmpty(x, y) {
+        for (let i = -1; i <= 1; i++) {
+            for (let j = -1; j <= 1; j++) {
+                const newX = x + i;
+                const newY = y + j;
+                if (newX >= 0 && newX < gridSize && newY >= 0 && newY < gridSize) {
+                    if (!cells[newX][newY].classList.contains('revealed') && !cells[newX][newY].classList.contains('mine')) {
+                        cells[newX][newY].classList.add('revealed');
+                        if (cells[newX][newY].textContent === '') {
+                            revealEmpty(newX, newY);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    function checkWin() {
+        for (let i = 0; i < gridSize; i++) {
+            for (let j = 0; j < gridSize; j++) {
+                if (!cells[i][j].classList.contains('mine') && !cells[i][j].classList.contains('revealed')) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    createBoard();
+});
 </script>
 
+<style>
+/* CSS for Minesweeper Game */
 
+#game {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    gap: 2px;
+    margin-top: 20px;
+}
 
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cell.revealed {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: default;
+}
+
+.cell.mine.revealed {
+    color: red;
+    font-size: 24px;
+}
+</style>

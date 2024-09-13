@@ -59,3 +59,43 @@ Welcome to my website! Here are some of my favorite movies:
 - **Environmental Engineering**: Learning about renewable energy sources like solar and wind power and how technology can help protect the environment.
 - **DIY Projects and Makerspace Activities**: Building things with my hands, like making model bridges, rockets, or even simple machines.
 - **Aerospace and Space Exploration**: Fascinated by rockets, space missions, and how spacecraft are designed to explore the universe.
+
+Hobbies
+
+## 1.  Researching Robotics
+Robotics involves designing, constructing, operating, and using robots. It incorporates aspects of mechanical engineering, electrical engineering, computer science, and more.
+
+![Robotics](https://upload.wikimedia.org/wikipedia/commons/6/63/Robot_Icub_Walk.jpg)
+
+
+---
+
+## 2. Coding 
+Coding is the process of creating instructions for computers using programming languages. It is a fundamental skill for software development and automation.
+
+![Coding](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Free_and_open-source_software_development_diagram.png/600px-Free_and_open-source_software_development_diagram.png)
+
+
+---
+
+## 3. Science
+Science is the systematic study of the natural world through observation and experimentation. It covers various disciplines such as physics, chemistry, biology, and more.
+
+![Science](https://upload.wikimedia.org/wikipedia/commons/5/5f/Scientific_Method_Chart.svg)
+
+
+---
+
+## 4. Reading
+Reading is a way to explore new worlds and ideas. One of my favorite books is **Jurassic Park** by Michael Crichton, a science fiction novel that explores the possibilities and dangers of genetic engineering.
+
+![Reading - Jurassic Park](https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/Jurassic_Park_%28novel%29.png/220px-Jurassic_Park_%28novel%29.png)
+
+
+---
+
+## 5. Hiking
+Hiking is a great way to connect with nature, enjoy fresh air, and explore scenic landscapes. It is both physically and mentally refreshing.
+
+![Hiking](https://upload.wikimedia.org/wikipedia/commons/5/5e/Talyllyn_Railway_Craig_Goch_Hiking_2014.jpg)
+
