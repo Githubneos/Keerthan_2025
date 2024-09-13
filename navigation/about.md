@@ -61,21 +61,15 @@ Welcome to my website! Here are some of my favorite movies:
 - **Aerospace and Space Exploration**: Fascinated by rockets, space missions, and how spacecraft are designed to explore the universe.
 
 Hobbies
----
-## 1. Science
-Science is the systematic study of the natural world through observation and experimentation. It covers various disciplines such as physics, chemistry, biology, and more.
-
-![Science](https://www.google.com/imgres?q=science%20image&imgurl=https%3A%2F%2Fmedia.istockphoto.com%2Fid%2F1165295700%2Fvector%2Flaboratory-beaker-icon-chemical-experiment-in-flask-%25D1%2581hemistry-and-biology-symbol-flask.jpg%3Fs%3D612x612%26w%3D0%26k%3D20%26c%3Dk81CYPB-emvwYwRhhwWHuSPmI1RzY_mO-AfmDT57WHQ%3D&imgrefurl=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fscience-beaker&docid=-fHkaaEZOjmHuM&tbnid=qeHu0IDTxvUAFM&vet=12ahUKEwjA0-vttsCIAxWRHEQIHbKWPU8QM3oFCIIBEAA..i&w=612&h=612&hcb=2&ved=2ahUKEwjA0-vttsCIAxWRHEQIHbKWPU8QM3oFCIIBEAA)
-
----
-## 2. Reading
+------
+## 1. Reading
 Reading is a way to explore new worlds and ideas. One of my favorite books is **Jurassic Park** by Michael Crichton, a science fiction novel that explores the possibilities and dangers of genetic engineering.
 
-![Reading - Jurassic Park](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FJurassic-Park-Novel-Michael-Crichton%2Fdp%2F0345538986&psig=AOvVaw05M_9RKokREOZmIHgn52M-&ust=1726334345618000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCi0t22wIgDFQAAAAAdAAAAABAE)
+![Reading - Jurassic Park](https://upload.wikimedia.org/wikipedia/en/2/21/Jurassic_Park_%28book_cover%29.jpg)
 
 ---
-## 3. Hiking
+## 2. Hiking
 Hiking is a great way to connect with nature, enjoy fresh air, and explore scenic landscapes. It is both physically and mentally refreshing.
 
-![Hiking](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vogue.com%2Farticle%2Fone-of-the-longest-hiking-trails-in-the-world-just-opened-in-chile&psig=AOvVaw2ZONP-2L74kJw0lvDERk9R&ust=1726334322577000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJixk9K2wIgDFQAAAAAdAAAAABAE)
+![Hiking](https://assets.vogue.com/photos/5bb28bccaa0a712dc73508cb/master/w_2240,c_limit/00-story-image-new-longest-hiking-trail-in-the-world-patagonia-chile.jpg)
 
