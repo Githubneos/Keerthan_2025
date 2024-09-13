@@ -7,7 +7,7 @@ image: /images/mario_animation.png
 hide: true
 comments: false
 ---
-(% include nav/home.html %)
+
 <table>
     <tr>
         <td><img src="{{site.baseurl}}/images/logo.png" height="60" title="Tools" alt=""></td>
