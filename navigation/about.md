@@ -2,6 +2,7 @@
 layout: page
 title: about
 permalink: /about/
+comments: true
 ---
 
 Places I have Lived:
@@ -73,3 +74,12 @@ Hiking is a great way to connect with nature, enjoy fresh air, and explore sceni
 
 ![Hiking](https://assets.vogue.com/photos/5bb28bccaa0a712dc73508cb/master/w_2240,c_limit/00-story-image-new-longest-hiking-trail-in-the-world-patagonia-chile.jpg)
 
+<div id="comments">
+  <script src="https://utteranc.es/client.js"
+          repo="Githubneos/Keerthan_2025"
+          issue-term="pathname"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
