@@ -13,6 +13,7 @@ comments: false
         <td><img src="{{site.baseurl}}/images/logo.png" height="60" title="Tools" alt=""></td>
         <td><a href="{{site.baseurl}}/about me">About Me</a></td>
         <td><a href="{{site.baseurl}}/accomplishments">Accomplishments</a></td>
+        <td><a href="{{site.baseurl}}/frontend">Front End</a></td>
     </tr>
 </table>
 
