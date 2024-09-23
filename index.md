@@ -11,7 +11,7 @@ comments: false
 <table>
     <tr>
         <td><img src="{{site.baseurl}}/images/logo.png" height="60" title="Tools" alt=""></td>
-        <td><a href="{{site.baseurl}}/javascriptcell">JavaScript Cell</a></td>
+        <td><a href="{{site.baseurl}}/Javascript Cell">JavaScript Cell</a></td>
         <td><a href="{{site.baseurl}}/accomplishments">Accomplishments</a></td>
         <td><a href="{{site.baseurl}}/frontend">Front End</a></td>
     </tr>
