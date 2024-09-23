@@ -4,6 +4,6 @@ title: Javascript Cell
 permalink: /Javascriptcell/
 ---
 
-<script>
- print(Hello World)
-</script>
+```python
+def hello():
+    print("Hello World, Your Journey begins here!")
