@@ -13,38 +13,39 @@
 @import "minima/dracula/dark-mode";
 
 // Variables
-$bg-color: #333;
-$bg-a-color: white;
-$bg-a-hover-color: #ff0;
+$primary-color: #333;
+$secondary-color: white;
+$hover-color: #ff0;
 
-// Nesting in SASS
+// Nesting
 nav {
-    background-color: $bg-color;
+  background-color: $primary-color;
 
-    ul {
-        list-style: none;
+  ul {
+    list-style: none;
 
-        li {
-            display: inline-block;
+    li {
+      display: inline-block;
 
-            a {
-                color: $bg-a-color;
-                text-decoration: none;
+      a {
+        color: $secondary-color;
+        text-decoration: none;
 
-                &:hover {
-                    color: $bg-a-hover-color;
-                }
-            }
+        &:hover {
+          color: $hover-color;
         }
+      }
     }
+  }
 }
 
 // Mixins
 @mixin border-radius($radius) {
-    border-radius: $radius;
+  border-radius: $radius;
 }
 
-// Example usage of mixin
+// Example use of mixin
 .box {
-    @include border-radius(10px);
+  @include border-radius(10px);
 }
+
