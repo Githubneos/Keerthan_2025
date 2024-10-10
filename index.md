@@ -10,11 +10,14 @@ comments: false
 
 <table>
     <tr>
-        <td><img src="{{site.baseurl}}/images/logo.png" height="60" title="Tools" alt=""></td>
-        <td><a href="{{site.baseurl}}/accomplishments">Accomplishments</a></td>
+        <td><a href="{{site.baseurl}}/devops/tools/home">Home</a></td>
+        <td><a href="{{site.baseurl}}/devops/tools/accounts">Accounts</a></td>
+        <td><a href="{{site.baseurl}}/devops/tools/setup">Setup</a></td>
+        <td><a href="{{site.baseurl}}/devops/tools/verify">Verify</a></td>
+        <td><a href="{{site.baseurl}}/devops/github/pages/play">Play</a></td>
+        <td><a href="{{site.baseurl}}/devops/hacks">Hacks</a></td>
     </tr>
 </table>
-
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
