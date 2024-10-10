@@ -8,14 +8,14 @@ hide: true
 comments: false
 ---
 
+
 <table>
     <tr>
         <td><a href="{{site.baseurl}}/devops/tools/home">Home</a></td>
-        <td><a href="{{site.baseurl}}/devops/tools/accounts">Accounts</a></td>
-        <td><a href="{{site.baseurl}}/devops/tools/setup">Setup</a></td>
-        <td><a href="{{site.baseurl}}/devops/tools/verify">Verify</a></td>
-        <td><a href="{{site.baseurl}}/devops/github/pages/play">Play</a></td>
-        <td><a href="{{site.baseurl}}/devops/hacks">Hacks</a></td>
+        <td><a href="{{site.baseurl}}/accomplishments/">Accomplishments</a></td>
+        <td><a href="{{site.baseurl}}/cookie-clicker/">Cookie Clicker</a></td>
+        <td><a href="{{site.baseurl}}/front-end/">Front End</a></td>
+        <td><a href="{{site.baseurl}}/JavascriptCell/">Javascript</a></td>
     </tr>
 </table>
 <!-- Liquid:  statements -->
