@@ -3,394 +3,225 @@ layout: base
 title: Student Home 
 description: Home Page
 author: Keerthan Karumudi
-image: /images/mario_animation.png
 hide: true
 comments: false
 ---
 
-
-<table>
-    <tr>
-        <td><a href="{{site.baseurl}}/devops/tools/home">Home</a></td>
-        <td><a href="{{site.baseurl}}/accomplishments/">Accomplishments</a></td>
-        <td><a href="{{site.baseurl}}/cookie-clicker/">Cookie Clicker</a></td>
-        <td><a href="{{site.baseurl}}/front-end/">Front End</a></td>
-        <td><a href="{{site.baseurl}}/JavascriptCell/">Javascript</a></td>
-    </tr>
-</table>
-<!-- Liquid:  statements -->
-
-<!-- Include submenu from _includes to top of pages -->
-
-<!--- Concatenation of site URL to frontmatter image  --->
-{% assign sprite_file = site.baseurl | append: page.image %}
-<!--- Has is a list variable containing mario metadata for sprite --->
-{% assign hash = site.data.mario_metadata %}  
-<!--- Size width/height of Sprit images --->
-{% assign pixels = 256 %}
-
-<!--- HTML for page contains <p> tag named "Mario" and class properties for a "sprite"  -->
-
-<p id="mario" class="sprite"></p>
-  
-<!--- Embedded Cascading Style Sheet (CSS) rules, 
-        define how HTML elements look 
---->
-<style>
-
-  /*CSS style rules for the id and class of the sprite...
-  */
-  .sprite {
-    height: {{pixels}}px;
-    width: {{pixels}}px;
-    background-image: url('{{sprite_file}}');
-    background-repeat: no-repeat;
-  }
-
-  /*background position of sprite element
-  */
-  #mario {
-    background-position: calc({{animations[0].col}} * {{pixels}} * -1px) calc({{animations[0].row}} * {{pixels}}* -1px);
-  }
-</style>
-
-<!--- Embedded executable code--->
-<script>
-  ////////// convert YML hash to javascript key:value objects /////////
-
-  var mario_metadata = {}; //key, value object
-  {% for key in hash %}  
-  
-  var key = "{{key | first}}"  //key
-  var values = {} //values object
-  values["row"] = {{key.row}}
-  values["col"] = {{key.col}}
-  values["frames"] = {{key.frames}}
-  mario_metadata[key] = values; //key with values added
-
-  {% endfor %}
-
-  ////////// game object for player /////////
-
-  class Mario {
-    constructor(meta_data) {
-      this.tID = null;  //capture setInterval() task ID
-      this.positionX = 0;  // current position of sprite in X direction
-      this.currentSpeed = 0;
-      this.marioElement = document.getElementById("mario"); //HTML element of sprite
-      this.pixels = {{pixels}}; //pixel offset of images in the sprite, set by liquid constant
-      this.interval = 100; //animation time interval
-      this.obj = meta_data;
-      this.marioElement.style.position = "absolute";
-    }
-
-    animate(obj, speed) {
-      let frame = 0;
-      const row = obj.row * this.pixels;
-      this.currentSpeed = speed;
-
-      this.tID = setInterval(() => {
-        const col = (frame + obj.col) * this.pixels;
-        this.marioElement.style.backgroundPosition = `-${col}px -${row}px`;
-        this.marioElement.style.left = `${this.positionX}px`;
-
-        this.positionX += speed;
-        frame = (frame + 1) % obj.frames;
-
-        const viewportWidth = window.innerWidth;
-        if (this.positionX > viewportWidth - this.pixels) {
-          document.documentElement.scrollLeft = this.positionX - viewportWidth + this.pixels;
-        }
-      }, this.interval);
-    }
-
-    startWalking() {
-      this.stopAnimate();
-      this.animate(this.obj["Walk"], 3);
-    }
-
-    startRunning() {
-      this.stopAnimate();
-      this.animate(this.obj["Run1"], 6);
-    }
-
-    startPuffing() {
-      this.stopAnimate();
-      this.animate(this.obj["Puff"], 0);
-    }
-
-    startCheering() {
-      this.stopAnimate();
-      this.animate(this.obj["Cheer"], 0);
-    }
-
-    startFlipping() {
-      this.stopAnimate();
-      this.animate(this.obj["Flip"], 0);
-    }
-
-    startResting() {
-      this.stopAnimate();
-      this.animate(this.obj["Rest"], 0);
-    }
-
-    stopAnimate() {
-      clearInterval(this.tID);
-    }
-  }
-
-  const mario = new Mario(mario_metadata);
-
-  ////////// event control /////////
-
-  window.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowRight") {
-      event.preventDefault();
-      if (event.repeat) {
-        mario.startCheering();
-      } else {
-        if (mario.currentSpeed === 0) {
-          mario.startWalking();
-        } else if (mario.currentSpeed === 3) {
-          mario.startRunning();
-        }
-      }
-    } else if (event.key === "ArrowLeft") {
-      event.preventDefault();
-      if (event.repeat) {
-        mario.stopAnimate();
-      } else {
-        mario.startPuffing();
-      }
-    }
-  });
-
-  //touch events that enable animations
-  window.addEventListener("touchstart", (event) => {
-    event.preventDefault(); // prevent default browser action
-    if (event.touches[0].clientX > window.innerWidth / 2) {
-      // move right
-      if (currentSpeed === 0) { // if at rest, go to walking
-        mario.startWalking();
-      } else if (currentSpeed === 3) { // if walking, go to running
-        mario.startRunning();
-      }
-    } else {
-      // move left
-      mario.startPuffing();
-    }
-  });
-
-  //stop animation on window blur
-  window.addEventListener("blur", () => {
-    mario.stopAnimate();
-  });
-
-  //start animation on window focus
-  window.addEventListener("focus", () => {
-     mario.startFlipping();
-  });
-
-  //start animation on page load or page refresh
-  document.addEventListener("DOMContentLoaded", () => {
-    // adjust sprite size for high pixel density devices
-    const scale = window.devicePixelRatio;
-    const sprite = document.querySelector(".sprite");
-    sprite.style.transform = `scale(${0.2 * scale})`;
-    mario.startResting();
-  });
-</script>
-
-👍 Python is awesome! 😀
+{% include nav/home.html %}
 
 <style>
-    .logo-container {
-        display: inline-block;
-        margin: 20px;
-        text-align: center;
-    }
-    .logo-container img {
-        width: 200px;
-        height: auto;
-    }
-    .logo-container p {
-        font-size: 18px;
-        font-weight: bold;
-    }
-</style>
+  <div class="post-content e-content" itemprop="articleBody"><style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
+  .container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #2c2c2c;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
 
-  <!-- Golden State Warriors logo -->
-  <div style="background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 15px; width: 200px; overflow: hidden; transition: transform 0.2s;">
-      <img src="https://upload.wikimedia.org/wikipedia/en/0/01/Golden_State_Warriors_logo.svg" alt="Golden State Warriors" style="width: 100%; height: auto;">
-      <div style="padding: 10px; font-size: 18px; font-weight: bold; color: #555;">Golden State Warriors</div>
-  </div>
+  h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ffffff;
+  }
 
-  <!-- Boston Celtics logo -->
-  <div style="background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 15px; width: 200px; overflow: hidden; transition: transform 0.2s;">
-      <img src="https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg" alt="Boston Celtics" style="width: 100%; height: auto;">
-      <div style="padding: 10px; font-size: 18px; font-weight: bold; color: #555;">Boston Celtics</div>
-  </div>
+  .main-link {
+    display: inline-block;
+    font-size: 22px;
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease;
+  }
 
-<div id="game"></div>
+  .main-link:hover {
+    background-color: #2980b9;
+  }
 
-<script>
-// JavaScript for Minesweeper Game
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const gridSize = 10; // Grid size (10x10)
-    const mineCount = 15; // Number of mines
-    const grid = document.getElementById("game");
-    const cells = [];
-    let gameOver = false;
+  .link-container {
+    width: 48%;
+    margin-bottom: 20px;
+  }
 
-    function createBoard() {
-        grid.innerHTML = '';
-        cells.length = 0;
-        gameOver = false;
-
-        // Create grid
-        for (let i = 0; i < gridSize; i++) {
-            const row = [];
-            for (let j = 0; j < gridSize; j++) {
-                const cell = document.createElement("button");
-                cell.classList.add("cell");
-                cell.dataset.x = i;
-                cell.dataset.y = j;
-                cell.addEventListener('click', () => handleClick(i, j));
-                row.push(cell);
-                grid.appendChild(cell);
-            }
-            cells.push(row);
-        }
-
-        // Randomly place mines
-        let minesPlaced = 0;
-        while (minesPlaced < mineCount) {
-            const x = Math.floor(Math.random() * gridSize);
-            const y = Math.floor(Math.random() * gridSize);
-            if (!cells[x][y].classList.contains('mine')) {
-                cells[x][y].classList.add('mine');
-                minesPlaced++;
-            }
-        }
-
-        // Calculate numbers for each cell
-        for (let i = 0; i < gridSize; i++) {
-            for (let j = 0; j < gridSize; j++) {
-                if (!cells[i][j].classList.contains('mine')) {
-                    const count = countMinesAround(i, j);
-                    if (count > 0) cells[i][j].textContent = count;
-                }
-            }
-        }
-    }
-
-    function countMinesAround(x, y) {
-        let count = 0;
-        for (let i = -1; i <= 1; i++) {
-            for (let j = -1; j <= 1; j++) {
-                const newX = x + i;
-                const newY = y + j;
-                if (newX >= 0 && newX < gridSize && newY >= 0 && newY < gridSize) {
-                    if (cells[newX][newY].classList.contains('mine')) count++;
-                }
-            }
-        }
-        return count;
-    }
-
-    function handleClick(x, y) {
-        if (gameOver || cells[x][y].classList.contains('revealed')) return;
-
-        cells[x][y].classList.add('revealed');
-        if (cells[x][y].classList.contains('mine')) {
-            revealMines();
-            alert('Game Over! You clicked on a mine.');
-            gameOver = true;
-        } else if (cells[x][y].textContent === '') {
-            revealEmpty(x, y);
-        }
-
-        // Check if the game is won
-        if (checkWin()) {
-            alert('Congratulations! You won!');
-            gameOver = true;
-        }
-    }
-
-    function revealMines() {
-        for (let i = 0; i < gridSize; i++) {
-            for (let j = 0; j < gridSize; j++) {
-                if (cells[i][j].classList.contains('mine')) {
-                    cells[i][j].classList.add('revealed');
-                    cells[i][j].textContent = '💣';
-                }
-            }
-        }
-    }
-
-    function revealEmpty(x, y) {
-        for (let i = -1; i <= 1; i++) {
-            for (let j = -1; j <= 1; j++) {
-                const newX = x + i;
-                const newY = y + j;
-                if (newX >= 0 && newX < gridSize && newY >= 0 && newY < gridSize) {
-                    if (!cells[newX][newY].classList.contains('revealed') && !cells[newX][newY].classList.contains('mine')) {
-                        cells[newX][newY].classList.add('revealed');
-                        if (cells[newX][newY].textContent === '') {
-                            revealEmpty(newX, newY);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    function checkWin() {
-        for (let i = 0; i < gridSize; i++) {
-            for (let j = 0; j < gridSize; j++) {
-                if (!cells[i][j].classList.contains('mine') && !cells[i][j].classList.contains('revealed')) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-    createBoard();
-});
-</script>
-
-<style>
-/* CSS for Minesweeper Game */
-
-#game {
-    display: grid;
-    grid-template-columns: repeat(10, 40px);
-    gap: 2px;
-    margin-top: 20px;
-}
-
-.cell {
-    width: 40px;
-    height: 40px;
-    background-color: #e0e0e0;
-    border: none;
-    font-size: 18px;
+  .dropdown {
+    background-color: #3c3c3c;
+    color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    display: block;
     cursor: pointer;
-    transition: background-color 0.2s;
-}
+    transition: background-color 0.3s ease;
+  }
 
-.cell.revealed {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    cursor: default;
-}
+  .dropdown:hover {
+    background-color: #555555;
+  }
 
-.cell.mine.revealed {
-    color: red;
-    font-size: 24px;
-}
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #555555;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px;
+    top: 40px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  ul {
+    text-align: left;
+    padding-left: 20px;
+  }
 </style>
+
+<div class="container">
+  <h1>Programming Topics</h1>
+
+  <div class="links">
+    <!-- Dropdown for Unit 1 -->
+        <div class="link-container">
+       <div class="dropdown" onclick="window.location.href='https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/p2/3-1';">Unit 1 — Variables and Assignments
+        <div class="dropdown-content">
+          <ul>
+            <li>Naming: SnakeCase, Pascal Case, CamelCase</li>
+            <li>Types of Variables: Intigers, Strings, Boolean, Floats, Lists, Dictionaries</li>
+            <li>Operators</li>
+            <li>Arrays and Objects in Javascript: Arrays, Objects</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Dropdown for Unit 2 -->
+    <div class="link-container">
+      <div class="dropdown" onclick="window.location.href='/TEST_2025/32hacks';">Unit 2 — Data Abstraction
+        <div class="dropdown-content">
+          <ul>
+            <li>Learned how various data types can use abstraction for efficiency</li>
+            <li>Created dictionaries to encapse variables</li>
+            <li>Learned about number functions to create a simple javascript and python calculator</li>
+            <li>Learned about looping through strings to print outputs in python</li>
+            <li>Functions that compare different strings with eachother, and returning true or false outputs.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Dropdown for Unit 3 -->
+    <div class="link-container">
+      <div class="dropdown" onclick="window.location.href='/TEST_2025/33-35hacks';">Unit 3 — Mathematical Expressions
+        <div class="dropdown-content">
+          <ul>
+            <li>Using arithmetic operators (+,-,*,/) to perform calculatoins</li>
+            <li>Also learned the code for factorials involving variable creation as well as multiplication and subtraction. Can also use division and addition based on personal preference.</li>
+            <li>Learned about fibonacci sequence and how to calculate the "n"th digit of fibonacci sequence</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Dropdown for Unit 4 -->
+    <div class="link-container">
+      <div class="dropdown" onclick="window.location.href='https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/p2/3-1';">Unit 4 — Strings and String Operations
+        <div class="dropdown-content">
+          <ul>
+            <li>Go over string functions in both javascript and python as follows:</li>
+            <li>Concatenation, Interpolation, Indexing (substrings), escape characters (javascript)</li>
+            <li>Using looping to create a palindrome checker and reverse order hack (python)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Dropdown for Unit 5 -->
+    <div class="link-container">
+      <div class="dropdown" onclick="window.location.href='/33-35hacks';">Unit 5 — Boolean Expressions
+        <div class="dropdown-content">
+          <ul>
+            <li>Learned how boolean expressions involve using loops and conditions to make decisions.</li>
+            <li>Rational Operators, Logical Operators </li>
+            <li>Creating Logic Gate Similator in boty Python and Java</li>
+            <li>Contrapositive Law in Python and Java</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Dropdown for Unit 6 -->
+    <div class="link-container">
+      <div class="dropdown" onclick="window.location.href='/TEST_2025/36-37hacks';">Unit 6 — Conditionals
+        <div class="dropdown-content">
+          <ul>
+            <li>Go over If Statements, Else Statements, Javascript and Python Examples. </li>
+            <li>Use these conditionals in our popcorn hacks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Dropdown for Unit 7 -->
+    <div class="link-container">
+      <div class="dropdown" onclick="window.location.href='/TEST_2025/36-37hacks';">Unit 7 — Nested Conditionals
+        <div class="dropdown-content">
+          <ul>
+            <li>If statements, Else Statements, Nested Conditions, and Examples in both languages we're learning.</li>
+            <li>Conditionals using variables and operations to pair with if and else statements to create programs.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Dropdown for Unit 8 -->
+    <div class="link-container">
+      <div class="dropdown" onclick="window.location.href='/TEST_2025/38hacks';">Unit 8 — Iterations
+        <div class="dropdown-content">
+          <ul>
+            <li>Going over Looping: For Loops, While Loops / Do-While Loops, Index Loops</li>
+            <li>Learning how to continue and break loops</li>
+            <li>Endless/Infinite loop. When Condition is not met then loop continues infintetly</li>
+            <li>Common operations: iterating over rows and columns.</li>
+            <li>Using exceptions with loops</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Dropdown for Unit 9 -->
+    <div class="link-container">
+      <div class="dropdown" onclick="window.location.href='/TEST_2025/310hacks';">Unit 10 — Lists
+        <div class="dropdown-content">
+          <ul>
+            <li>Learning how storage and maniplation of data is performed using indexing and lists.</li>
+            <li>Learned how to: Add values to lists, insert elements to list, append elements to end of lists, remove elements from list, and calculate the length of a list.</li>
+            <li>Learned about Pseudocode:</li>
+            <li>Variables in sudocode, number lists, modulus operator (remainder) and control structures.</li>
+            <li>Practiced using iterations in functions.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- The Link for the issue -->
+    <a href="/TEST_2025/2024/10/16/megahack_IPYNB_2_.html" class="main-link">Go to My MegaHack</a>
+  </div>
+</div>
