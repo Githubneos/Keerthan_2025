@@ -4,10 +4,8 @@ title: Student Home
 description: Home Page
 author: Keerthan Karumudi
 hide: true
-comments: false
+comments: true
 ---
-
-{% include nav/home.html %}
 
 <style>
   <div class="post-content e-content" itemprop="articleBody"><style>
