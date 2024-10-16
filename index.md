@@ -219,7 +219,63 @@ comments: true
         </div>
       </div>
     </div>
-    <!-- The Link for the issue -->
-    <a href="/TEST_2025/2024/10/16/megahack_IPYNB_2_.html" class="main-link">Go to My MegaHack</a>
-  </div>
-</div>
+
+# Number Guessing Game
+
+This is a simple number guessing game where you have 5 attempts to guess a randomly generated number between 1 and 50.
+
+```python
+import random
+
+# Function for the guessing game
+def play_guessing_game():
+    # Variable: Generate a random number between 1 and 50
+    number_to_guess = random.randint(1, 50)
+    
+    # List to store guesses
+    guesses = []
+    
+    # Iteration: Loop for 5 attempts
+    attempts = 5
+    while attempts > 0:
+        try:
+            # Data abstraction: Getting user input
+            guess = int(input("Guess a number between 1 and 50: "))
+            
+            # Mathematical expressions: Add the guess to the list
+            guesses.append(guess)
+            
+            # Boolean values and conditionals
+            if guess == number_to_guess:
+                print(f"Congratulations! You guessed the number {number_to_guess} correctly!")
+                break
+            elif guess < number_to_guess:
+                print("Your guess is too low.")
+            else:
+                print("Your guess is too high.")
+            
+            # Nested conditional to give feedback on attempts left
+            attempts -= 1
+            if attempts > 0:
+                print(f"You have {attempts} attempts left.")
+            else:
+                print(f"Game over! The correct number was {number_to_guess}.")
+        
+        except ValueError:
+            print("Please enter a valid number.")
+    
+    # Display guesses made by the player
+    print(f"Your guesses: {guesses}")
+
+# Main loop to control game flow (play again or quit)
+while True:
+    # String for user input on whether to play
+    play_game = input("Do you want to play the number guessing game? (yes/no): ").lower()
+    
+    if play_game == "yes":
+        play_guessing_game()
+    elif play_game == "no":
+        print("Thanks for playing! Goodbye.")
+        break
+    else:
+        print("Please answer with 'yes' or 'no'.")
