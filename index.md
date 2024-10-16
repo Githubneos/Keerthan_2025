@@ -220,32 +220,30 @@ comments: true
       </div>
     </div>
 
-# Number Guessing Game
 
-This is a simple number guessing game where you have 5 attempts to guess a randomly generated number between 1 and 50.
-
+# Welcome to the Fun Number Guessing Game
 ```python
+
+<div style="text-align: center;">
+    <h2>How to Play</h2>
+    <ul style="list-style-type: none;">
+        <li>1. The program will generate a random number between 1 and 50.</li>
+        <li>2. You will be prompted to guess the number.</li>
+        <li>3. The game will give feedback: whether your guess is too high, too low, or correct.</li>
+        <li>4. You have 5 chances to guess the number correctly. If not, the game ends, and the correct number is revealed.</li>
+    </ul>
+</div>
 import random
 
 # Function for the guessing game
 def play_guessing_game():
-    # Variable: Generate a random number between 1 and 50
     number_to_guess = random.randint(1, 50)
-    
-    # List to store guesses
     guesses = []
-    
-    # Iteration: Loop for 5 attempts
     attempts = 5
     while attempts > 0:
         try:
-            # Data abstraction: Getting user input
             guess = int(input("Guess a number between 1 and 50: "))
-            
-            # Mathematical expressions: Add the guess to the list
             guesses.append(guess)
-            
-            # Boolean values and conditionals
             if guess == number_to_guess:
                 print(f"Congratulations! You guessed the number {number_to_guess} correctly!")
                 break
@@ -253,25 +251,18 @@ def play_guessing_game():
                 print("Your guess is too low.")
             else:
                 print("Your guess is too high.")
-            
-            # Nested conditional to give feedback on attempts left
             attempts -= 1
             if attempts > 0:
                 print(f"You have {attempts} attempts left.")
             else:
                 print(f"Game over! The correct number was {number_to_guess}.")
-        
         except ValueError:
             print("Please enter a valid number.")
-    
-    # Display guesses made by the player
     print(f"Your guesses: {guesses}")
 
-# Main loop to control game flow (play again or quit)
+# Main loop
 while True:
-    # String for user input on whether to play
     play_game = input("Do you want to play the number guessing game? (yes/no): ").lower()
-    
     if play_game == "yes":
         play_guessing_game()
     elif play_game == "no":
