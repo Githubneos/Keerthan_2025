@@ -7,6 +7,18 @@ hide: true
 comments: true
 ---
 
+<table>
+    <tr>
+        <td><img src="{{site.baseurl}}/images/logo.png" height="60" title="Tools" alt=""></td>
+        <td><a href="{{site.baseurl}}/accomplishments/">Accomplishments</a></td>
+        <td><a href="{{site.baseurl}}/front-end/">HTML Frontend</a></td>
+        <td><a href="{{site.baseurl}}/cookie-clicker/">Cookie Clicker</a></td>
+        <td><a href="{{site.baseurl}}/devops/tools/verify">Verify</a></td>
+        <td><a href="{{site.baseurl}}/devops/github/pages/play">Play</a></td>
+        <td><a href="{{site.baseurl}}/devops/hacks">Hacks</a></td>
+    </tr>
+</table>
+
 <style>
   body {
     font-family: 'Arial', sans-serif;
