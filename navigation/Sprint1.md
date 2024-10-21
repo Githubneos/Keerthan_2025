@@ -1,3 +1,10 @@
+---
+layout: page
+title: Sprint 1 hacks
+description: Sprint 1 hacks
+permalink: /sprint1/
+---
+
 # My GitHub Pages Links Table
 
 Welcome to my GitHub Pages site! Below is a table that contains links to different resources or pages.

@@ -13,6 +13,7 @@ comments: true
         <td><a href="{{site.baseurl}}/accomplishments/">Accomplishments</a></td>
         <td><a href="{{site.baseurl}}/front-end/">HTML Frontend</a></td>
         <td><a href="{{site.baseurl}}/cookie-clicker/">Cookie Clicker</a></td>
+        <td><a href="{{site.baseurl}}/sprint1/">Sprint 1 hacks</a></td>
     </tr>
 </table>
 
