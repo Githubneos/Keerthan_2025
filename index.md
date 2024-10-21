@@ -256,7 +256,12 @@ comments: true
 
 # Guess the Number Game
 
-Try to guess the randomly generated number between 1 and 100! You have 5 attempts.
+<style>
+/* Make the text color black */
+body {
+    color: black;
+}
+</style>
 
 <script>
   // Variables
@@ -267,11 +272,12 @@ Try to guess the randomly generated number between 1 and 100! You have 5 attempt
 
   // Function to check the user's guess
   function checkGuess() {
-    let guess = document.getElementById('guess').value;  // Get user input from the text box
+    // Data abstraction: get user input from the text box
+    let guess = document.getElementById('guess').value;
     guess = parseInt(guess);  // Convert the input to an integer
     let message = "";  // String to store the message
     
-    // Conditionals to compare the guess with the secret number
+    // Conditional statements to compare the guess with the secret number
     if (guess < secretNumber) {
       message = "Too low!";
     } else if (guess > secretNumber) {
@@ -293,3 +299,12 @@ Try to guess the randomly generated number between 1 and 100! You have 5 attempt
     output.innerHTML = message;
   }
 </script>
+
+<!-- Form for user input -->
+<form>
+  <!-- Input box for the user to enter a guess -->
+  <input type="number" id="guess" placeholder="Enter your guess" />
+  
+  <!-- Button to trigger the checkGuess function -->
+  <button type="button" onclick="checkGuess()">Submit</button>
+</form>
