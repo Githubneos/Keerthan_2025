@@ -254,60 +254,42 @@ comments: true
 </head>
 <body>
 
-<h1>Welcome to the Number Guessing Game!</h1>
-<p>Try to guess the secret number between 1 and 100.</p>
-<input type="number" id="guessInput" placeholder="Enter your guess" />
-<button onclick="makeGuess()">Guess</button>
+# Guess the Number Game
 
-<div id="result"></div>
-<div id="guessedNumbers"></div>
+Try to guess the randomly generated number between 1 and 100! You have 5 attempts.
 
 <script>
-    // Variables
-    let secretNumber = Math.floor(Math.random() * 100) + 1; // Random number between 1 and 100
-    const maxAttempts = 7; // Maximum attempts allowed
-    let attempts = 0; // Count of attempts
-    const guessedNumbers = []; // Array to keep track of guessed numbers
+  // Variables
+  let secretNumber = Math.floor(Math.random() * 100) + 1;  // Random number between 1 and 100
+  let attempts = 5;  // Number of attempts left
+  let output = document.createElement("p");  // Create a paragraph element to show messages
+  document.body.appendChild(output);  // Append the paragraph to the body of the page
 
-    // Function to make a guess
-    function makeGuess() {
-        const guessInput = document.getElementById('guessInput');
-        const resultDiv = document.getElementById('result');
-        const guessedNumbersDiv = document.getElementById('guessedNumbers');
-
-        let guess = parseInt(guessInput.value); // Convert input to an integer
-
-        // Check if the input is a valid number
-        if (isNaN(guess) || guess < 1 || guess > 100) {
-            resultDiv.textContent = "Please enter a valid number between 1 and 100.";
-            return;
-        }
-
-        guessedNumbers.push(guess); // Add guess to the array
-        attempts++; // Increment attempt count
-
-        // Check the guess
-        if (guess < secretNumber) {
-            resultDiv.textContent = "Too low! Try again.";
-        } else if (guess > secretNumber) {
-            resultDiv.textContent = "Too high! Try again.";
-        } else {
-            resultDiv.textContent = `Congratulations! You guessed the number ${secretNumber} in ${attempts} attempts.`;
-            return; // Stop further guesses
-        }
-
-        // Check if maximum attempts reached
-        if (attempts >= maxAttempts) {
-            resultDiv.textContent = `Sorry! You've used all your attempts. The secret number was ${secretNumber}.`;
-            return; // Stop further guesses
-        }
-
-        // Display guessed numbers
-        guessedNumbersDiv.textContent = `Guessed numbers: ${guessedNumbers.join(", ")}`;
-        guessInput.value = ""; // Clear input field
+  // Function to check the user's guess
+  function checkGuess() {
+    let guess = document.getElementById('guess').value;  // Get user input from the text box
+    guess = parseInt(guess);  // Convert the input to an integer
+    let message = "";  // String to store the message
+    
+    // Conditionals to compare the guess with the secret number
+    if (guess < secretNumber) {
+      message = "Too low!";
+    } else if (guess > secretNumber) {
+      message = "Too high!";
+    } else {
+      message = "You got it!";
+      attempts = 0;  // Set attempts to 0 to end the game
     }
+    
+    // Nested conditionals to check the number of attempts
+    attempts--;
+    if (attempts > 0 && message !== "You got it!") {
+      message += " You have " + attempts + " attempts left.";
+    } else if (attempts == 0 && message !== "You got it!") {
+      message = "Game over! The correct number was " + secretNumber + ".";
+    }
+    
+    // Display the message in the paragraph
+    output.innerHTML = message;
+  }
 </script>
-
-</body>
-</html>
-
