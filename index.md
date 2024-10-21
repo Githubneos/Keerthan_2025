@@ -18,6 +18,7 @@ comments: true
 </table>
 
 <style>
+  <div class="post-content e-content" itemprop="articleBody"><style>
   body {
     font-family: 'Arial', sans-serif;
     background-color: #1a1a1a;
@@ -115,12 +116,12 @@ comments: true
 
   <div class="links">
     <!-- Dropdown for Unit 1 -->
-    <div class="link-container">
-      <div class="dropdown" onclick="window.location.href='https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/p2/3-1';">Unit 1 — Variables and Assignments
+        <div class="link-container">
+       <div class="dropdown" onclick="window.location.href='https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/p2/3-1';">Unit 1 — Variables and Assignments
         <div class="dropdown-content">
           <ul>
             <li>Naming: SnakeCase, Pascal Case, CamelCase</li>
-            <li>Types of Variables: Integers, Strings, Boolean, Floats, Lists, Dictionaries</li>
+            <li>Types of Variables: Intigers, Strings, Boolean, Floats, Lists, Dictionaries</li>
             <li>Operators</li>
             <li>Arrays and Objects in Javascript: Arrays, Objects</li>
           </ul>
@@ -133,10 +134,10 @@ comments: true
         <div class="dropdown-content">
           <ul>
             <li>Learned how various data types can use abstraction for efficiency</li>
-            <li>Created dictionaries to encapsulate variables</li>
+            <li>Created dictionaries to encapse variables</li>
             <li>Learned about number functions to create a simple javascript and python calculator</li>
             <li>Learned about looping through strings to print outputs in python</li>
-            <li>Functions that compare different strings with each other, and returning true or false outputs.</li>
+            <li>Functions that compare different strings with eachother, and returning true or false outputs.</li>
           </ul>
         </div>
       </div>
@@ -146,9 +147,9 @@ comments: true
       <div class="dropdown" onclick="window.location.href='/TEST_2025/33-35hacks';">Unit 3 — Mathematical Expressions
         <div class="dropdown-content">
           <ul>
-            <li>Using arithmetic operators (+,-,*,/) to perform calculations</li>
-            <li>Learned the code for factorials involving variable creation as well as multiplication and subtraction.</li>
-            <li>Learned about the Fibonacci sequence and how to calculate the "n"th digit of Fibonacci sequence</li>
+            <li>Using arithmetic operators (+,-,*,/) to perform calculatoins</li>
+            <li>Also learned the code for factorials involving variable creation as well as multiplication and subtraction. Can also use division and addition based on personal preference.</li>
+            <li>Learned about fibonacci sequence and how to calculate the "n"th digit of fibonacci sequence</li>
           </ul>
         </div>
       </div>
@@ -171,8 +172,8 @@ comments: true
         <div class="dropdown-content">
           <ul>
             <li>Learned how boolean expressions involve using loops and conditions to make decisions.</li>
-            <li>Rational Operators, Logical Operators</li>
-            <li>Creating Logic Gate Simulator in both Python and Java</li>
+            <li>Rational Operators, Logical Operators </li>
+            <li>Creating Logic Gate Similator in boty Python and Java</li>
             <li>Contrapositive Law in Python and Java</li>
           </ul>
         </div>
@@ -183,7 +184,7 @@ comments: true
       <div class="dropdown" onclick="window.location.href='/TEST_2025/36-37hacks';">Unit 6 — Conditionals
         <div class="dropdown-content">
           <ul>
-            <li>Go over If Statements, Else Statements, Javascript and Python Examples.</li>
+            <li>Go over If Statements, Else Statements, Javascript and Python Examples. </li>
             <li>Use these conditionals in our popcorn hacks</li>
           </ul>
         </div>
@@ -207,29 +208,27 @@ comments: true
           <ul>
             <li>Going over Looping: For Loops, While Loops / Do-While Loops, Index Loops</li>
             <li>Learning how to continue and break loops</li>
-            <li>Endless/Infinite loop. When Condition is not met then loop continues infinitely</li>
+            <li>Endless/Infinite loop. When Condition is not met then loop continues infintetly</li>
             <li>Common operations: iterating over rows and columns.</li>
             <li>Using exceptions with loops</li>
           </ul>
         </div>
       </div>
     </div>
-    <!-- Dropdown for Unit 10 -->
+    <!-- Dropdown for Unit 9 -->
     <div class="link-container">
       <div class="dropdown" onclick="window.location.href='/TEST_2025/310hacks';">Unit 10 — Lists
         <div class="dropdown-content">
           <ul>
-            <li>Learning how storage and manipulation of data is performed using indexing and lists.</li>
+            <li>Learning how storage and maniplation of data is performed using indexing and lists.</li>
             <li>Learned how to: Add values to lists, insert elements to list, append elements to end of lists, remove elements from list, and calculate the length of a list.</li>
             <li>Learned about Pseudocode:</li>
-            <li>Variables in pseudocode, number lists, modulus operator (remainder) and control structures.</li>
+            <li>Variables in sudocode, number lists, modulus operator (remainder) and control structures.</li>
             <li>Practiced using iterations in functions.</li>
           </ul>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
 <html lang="en">
 <head>
