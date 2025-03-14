@@ -11,7 +11,7 @@ comments: true
 
 # MC Review Blog
 
-Final score: 29/60
+Final score: 42/67
 
 ## Missed topics breakdown
 
