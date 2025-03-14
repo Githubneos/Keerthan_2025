@@ -241,3 +241,15 @@ The errors I committed were due mostly to two fundamental problems: defects in f
 ### Reflection on Growth
 
 Looking back, it is clear to me how these mistakes represent opportunities for development. In order to fill in the foundational gaps, I will review the most important concepts and practice their application through coding exercises, real-life examples, and challenges in debugging. To perform better problem-solving, I am going to slow down, investigate the tasks more carefully, and practice structured representations like pseudocode and flowcharts. Developing a systematic approach to evaluating solutions will enhance my decision-making and critical analysis. Also, reading through case studies, practicing those tough edge cases, and asking for feedback will build my improvement in understanding and doing those things. 
+
+
+
+<div id="comments">
+  <script src="https://utteranc.es/client.js"
+          repo="Githubneos/Keerthan_2025"
+          issue-term="pathname"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
