@@ -15,6 +15,7 @@ comments: true
         <td><a href="{{site.baseurl}}/cookie-clicker/">Cookie Clicker</a></td>
         <td><a href="{{site.baseurl}}/sprint1/">Sprint 1 hacks</a></td>
         <td><a href="{{site.baseurl}}/cpt/">CPT & PPR Review</a></td>
+        <td><a href="{{site.baseurl}}/mc/">MC Review</a></td>
     </tr>
 </table>
 
